@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+Route::get('/adminmenu',['middleware'=>'role:admin',function(){
+	return "ini menu admin";
+}]);
