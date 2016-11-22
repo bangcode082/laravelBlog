@@ -19,6 +19,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/adminmenu',['middleware'=>'role:admin',function(){
-	return "ini menu admin";
-}]);
+Route::get('/berhasil',function(){
+	return view('berhasil');
+});
+
+Route::get('user/index',['as'=>'user.index','uses'=>'UserController@index']);
+Route::get('user/edit/{id}',['as'=>'user.edit','uses'=>'UserController@edit']);
