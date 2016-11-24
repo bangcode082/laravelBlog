@@ -25,8 +25,7 @@ class UserController extends Controller
 			['data' => 'name', 'name' => 'name', 'title' => 'Nama'],
 			['data' => 'email', 'name' => 'email', 'title' => 'Email'],
 			['data' => 'role', 'name' => 'role', 'title' => 'Role']              
-			])->addColumn(['data' => 'action', 'name'=>'action', 'title'=>'', 'orderable'=>false, '\
-			searchable'=>false]);
+			])->addColumn(['data' => 'action', 'name'=>'action', 'title'=>'', 'orderable'=>false, 'searchable'=>false]);
 
 			return view('auth.index')->with(compact('html'));
 
