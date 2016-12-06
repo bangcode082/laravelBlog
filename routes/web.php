@@ -17,7 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/ldirect', 'DashboardController@directWelcome');
+Route::get('welcome','DashboardController@welcome');
 
 Route::get('/berhasil',function(){
 	return view('berhasil');
@@ -25,3 +26,13 @@ Route::get('/berhasil',function(){
 
 Route::get('user/index',['as'=>'user.index','uses'=>'UserController@index']);
 Route::get('user/edit/{id}',['as'=>'user.edit','uses'=>'UserController@edit']);
+
+
+Route::get('admin',function(){
+	return view('layouts.partial.sample');
+});
+
+//route auth
+
+Route::get('/change-password', 'PasswordController@changePassword');
+Route::put('/change-password', 'PasswordController@updatePassword');
