@@ -36,3 +36,6 @@ Route::get('admin',function(){
 
 Route::get('/change-password', 'PasswordController@changePassword');
 Route::put('/change-password', 'PasswordController@updatePassword');
+
+
+//tes doangg
